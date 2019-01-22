@@ -27,8 +27,24 @@
 
 
     function NarrowItDownDirectiveController() {
-        var ctrl = this;
-
+        var dirctrl = this;
+        //Always use directive controller As object and properties!!!!!!!!!!!!!!!!!! 
+        dirctrl.emptySearch = function(){
+          if(dirctrl.items=== undefined){
+          
+            dirctrl.searchState = "Enter a search term!";
+            return true
+          }
+          else if (dirctrl.items.length === 0){
+            dirctrl.searchState = "Nothing Found";
+            return true
+          }
+          else{
+           
+            return false;
+          }
+      }
+    
     }
    
 
@@ -72,7 +88,7 @@
           for (var i in response.data.menu_items){ 
             if(response.data.menu_items[i].name.toLowerCase().includes(searchString)){
               // console.log("This verifies: " + response.data.menu_items[i].name);
-              names.push(response.data.menu_items[i].name);
+              names.push(response.data.menu_items[i]);
             }
          }
          return names;
