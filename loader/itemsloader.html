@@ -1,0 +1,9 @@
+<h3 id = "title">{{dirctrl.myTitle}}</h3>
+<div class="loader"> 
+
+
+</div>
+<li id="lelem"  ng-repeat="name in dirctrl.items track by $index">
+        {{name}}
+    <button ng-click="dirctrl.onRemove({index: $index})">Remove Item</button>
+</li>
