@@ -4,6 +4,6 @@
 
 <li id="lelem"  ng-repeat="name in dirctrl.items track by $index">
         {{name.name}}({{name.short_name}}):  {{name.description}}
-    <button ng-click="dirctrl.onRemove({index: $index})">Remove Item</button>
+    <button ng-click="dirctrl.onRemove({index: $index})">Don't want this one</button>
 </li>
 <div class = "error" ng-if="dirctrl.emptySearch()">{{dirctrl.searchState}}</div>
