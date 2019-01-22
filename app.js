@@ -86,7 +86,7 @@
         
           // console.log("Search String in service: " + searchString);
           for (var i in response.data.menu_items){ 
-            if(response.data.menu_items[i].name.toLowerCase().includes(searchString)){
+            if(response.data.menu_items[i].description.toLowerCase().includes(searchString)){
               // console.log("This verifies: " + response.data.menu_items[i].name);
               names.push(response.data.menu_items[i]);
             }
